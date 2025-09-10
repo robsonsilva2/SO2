@@ -16,8 +16,24 @@ dev_junior:x:1002:1001::/home/dev_junior:/bin/sh
 
 # 3.Definição de Senhas
 sudo passwd dev_senior
+sudo passwd dev_junior
+sudo passwd qa_analyst 
+
+su - dev_senior
+
+senha: devsenior
+
+$
 
 su - dev_junior
+
+senha: devjunior
+
+$
+
+su - qa_analyst
+
+senha: qaanalyst
 
 
 # 4.Estrutuar de Diretórios
@@ -40,7 +56,7 @@ ls: não foi possivel abrir o diretório '/srv/projetos' :Permissão negada
 
 # 6.Controle de processos
 login dev_junior 
-login: talvez não seja possivel trabalhar serm o root efetivamente
+login: talvez não seja possivel trabalhar sem o root efetivamente
 sudo login dev_junior
 sleep 500 &
 ps aux | grep sleep
@@ -50,5 +66,20 @@ sudo kill 1
 $
 
 # 7.Shell Script de Boas-Vindas
+
+cd usr/local/bin/boasvindas.sh
+
+sudo touch boasvindas.sh
+sudo nano boasvindas.sh
+
+#!/bin/bash
+echo '==============================================='
+echo "Bem-vindo(a) ao Servidor de Desenvolvimento!"
+echo "Data e hora atual: $(date)"
+echo '==============================================='
+
+sudo chmod 755 /usr/local/bin/boasvindas.sh
+
+
 
 
