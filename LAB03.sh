@@ -39,8 +39,14 @@ sudo chmod 777 /srv/samba/publico
  #Etapa 5: Reiniciar e Testar
  
  sudo systemctl restart smbd
+ #output
+ enabled; preset: enabled
+ Active: active (running) since Mon 2025-09-15 14:36:40 -03; 4min 12s ago
  
  sudo systemctl restart nmbd
+ #output
+ enabled; preset: enabled
+ Active: active (running) since Mon 2025-09-15 14:37:11 -03; 11min ago
 
  
 testparm
