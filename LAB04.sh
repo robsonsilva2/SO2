@@ -50,7 +50,7 @@ nano /etc/resolv.conf:
 #Adicionado no topo:
 nameserver 127.0.0.53
 
-#Testando a soloção de nome:
+#Testando a solução de nome:
 dig www.empresa.local
 
 #Teste final com curl:
