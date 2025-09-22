@@ -33,7 +33,26 @@ echo "Firewall configurado!"
 iptables -L -n -v
 
 chmod +x firewall.sh
-sudo
+sudo ./firewall.sh
+
+#Etapa 2: Instalar e Configurar o PROXY (Squid)
+
+sudo apt-get install squid
+
+sudo nano /etc/squid/sites_bloqueados.txt
+
+.facebook.com
+.twitter.com
+.instagram.com
+
+sudo nano /etc/squid/squid.conf
+
+acl sites_bloqueados dstdomain "/etc/squid/sites_bloqueados.txt"
+http_access deny sites_bloqueados
+
+#Etapa 3: Reiniciar e Testar
+
+sudo systemctl restart squid
 
 
 
